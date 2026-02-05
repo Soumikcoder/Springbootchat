@@ -21,7 +21,8 @@
 
     stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);  // Log the successful connection
-        stompClient.subscribe('/topic/message', function (message) {
+        stompClient.subscribe('/notify/message', function (message) {
+            console.log("Got some Message!");
             showNotification(message.body);  // Handle incoming messages
         });
     }, function (error) {

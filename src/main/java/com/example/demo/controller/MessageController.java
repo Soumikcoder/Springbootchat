@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MessageController {
     
     @MessageMapping("/sendMessage")
-    @SendTo("/topic/message")
+    @SendTo("/notify/message")
     @CrossOrigin(origins = {"localhost:8080"})
     public String sendMessage(String message){
         System.out.println("Message :"+message);
